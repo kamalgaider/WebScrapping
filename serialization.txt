@@ -1,0 +1,7 @@
+import pickle
+
+    with open('filee.pkl', 'wb') as output:
+        pickle.dump(object2Pickle, output, pickle.HIGHEST_PROTOCOL)
+
+    with open('filee.pkl', 'rb') as readfile:
+        Pickle2object = pickle.load(readfile)

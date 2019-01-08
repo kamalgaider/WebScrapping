@@ -95,6 +95,19 @@ def main():
     descriptions = list(map(lambda x: x[24:-5], description_tags))
 
 
+    Comments =list()
+    for c in html.select('h3'):
+        if c.text == 'Comments':
+            cmt =""
+            cmts = list()
+            for i in c.find_next_siblings():
+                cmt += repr(i)
+            tmpHtml=bs(cmt, 'html.parser')
+            ptags = tmpHtml.select('p')
+            for p in ptags:
+                cmts.append(p.text)
+            Comments.append('|'.join(cmts))
+
 
     dictn = {
         "Title" : names,
@@ -105,12 +118,12 @@ def main():
         "Number of Reviews": reviews,
         "Short Description": descriptions,
         "ISBN Number": isbn,
-        "Number of Votes":votes
+        "Number of Votes":votes,
+        "Comments" : Comments
         }
 
-    file = pd.DataFrame(dictn)
-    file.to_csv("sample.csv", sep =",", index =False)
-
+    dF = pd.DataFrame(dictn)
+    dF.to_csv("sample.csv", sep =",", index =False)
 
 
 if __name__ == "__main__": main()   

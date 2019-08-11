@@ -1,0 +1,12 @@
+1) What is the book count under the category 'Classics'?					251
+2) What is the book count under the category 'Science Fiction'?					59
+3) How many authors have appeared across maximum number of genres
+4) What is the range of ratings under Classics genre?						1.88
+5) What is the median of rating under the category Fantasy?					4.295
+6) What is the number of votes received for the highest rated book in Fantasy?			38476
+7) What is the standard deviation of the rating of books under Business?			0.3525
+8) What is the genre of the highest voted book among all the books?				Fantasy
+9) Which genre has more number of authors with above average rating? 
+10) Which genre has the author with highest standard deviation in number of pages in book?
+11) How many books are there within 1 standard deviation from mean of number of pages?
+12) Among all the available descriptions for the books which word has the frequency between 6000 & 7000?ignore 1 & 2 letter words
